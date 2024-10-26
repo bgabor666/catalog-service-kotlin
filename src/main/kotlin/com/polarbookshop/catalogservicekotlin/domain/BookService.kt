@@ -30,10 +30,14 @@ class BookService(
 
         return existingBook?.let {
             val bookToUpdate = Book(
+                existingBook.id,
                 it.isbn,
                 book.title,
                 book.author,
                 book.price,
+                existingBook.createdDate,
+                existingBook.lastModifiedDate,
+                existingBook.version,
             )
             bookRepository.save(bookToUpdate)
         } ?: addBookToCatalog(book)
