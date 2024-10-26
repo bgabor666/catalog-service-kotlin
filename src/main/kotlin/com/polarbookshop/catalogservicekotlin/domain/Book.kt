@@ -31,6 +31,8 @@ data class Book(
     @field:Positive(message = "The book price must be greater than zero.")
     val price: Double,
 
+    val publisher: String? = null,
+
     @CreatedDate
     val createdDate: Instant? = null,
 
