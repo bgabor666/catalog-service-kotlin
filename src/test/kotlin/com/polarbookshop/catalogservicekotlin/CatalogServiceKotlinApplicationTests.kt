@@ -4,6 +4,7 @@ import com.polarbookshop.catalogservicekotlin.domain.Book
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
+import org.springframework.test.context.ActiveProfiles
 import org.springframework.test.web.reactive.server.WebTestClient
 import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
@@ -11,6 +12,7 @@ import kotlin.test.assertNotNull
 @SpringBootTest(
     webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT
 )
+@ActiveProfiles("integration")
 class CatalogServiceKotlinApplicationTests {
 
     @Autowired

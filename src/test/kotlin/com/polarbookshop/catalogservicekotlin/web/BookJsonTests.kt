@@ -20,7 +20,7 @@ class BookJsonTests {
             isbn = "1234567890",
             title = "Title",
             author = "Author",
-            9.90,
+            price = 9.90,
         )
 
         val jsonContent = json.write(book).json
